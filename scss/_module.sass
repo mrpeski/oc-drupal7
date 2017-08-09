@@ -1,14 +1,18 @@
 #nav
     background: inherit
     float: right
-    padding: 32px 0
+    padding: 30px 0
+    font-family: "Museo Sans 500"
 
 a.is-hollow
     background: transparent
     border: 1px solid $brand-color
     padding: 0.8em 1.6em !important
+    box-sizing: border-box
     color: $brand-color !important
     font-weight: 500
+    font-family: "Museo Sans 500"
+    text-transform: uppercase
 
 #nav li
     list-style: none
@@ -27,8 +31,9 @@ a.is-hollow
     background:  url(images/JBW2PXDOL6.png) left center  no-repeat, rgba(0,0,0,0.7)
     
     h1
-        font-size: 60px
+        font-size: 3em
         font-weight: 300
+        font-family: "Museo Sans 500"
 
     p:nth-child(2)
         font-size: 18px
@@ -40,18 +45,22 @@ a.is-hollow
     p
         font-size: 14px
         line-height: 1.6
-        width: 600px
-        margin: auto
+        // width: 600px
+        // margin: auto
 .wash
     background: $wash
     padding: $side-padding
-    line-height: 4
+    // line-height: 4
     // clear: both
 .event
-    p
-        padding: 30px 0
-        line-height: 1.2
-        float: left
+    text-align: center
+    // min-height: 120px
+    padding: 20px 0
+    
+    h4
+        font-size: 18px
+    .push-30
+        margin-top: 30px
 
 .button
     color: $white
@@ -59,6 +68,8 @@ a.is-hollow
     padding: 0.8em 1.6em
     font-weight: 500
     text-transform: uppercase
+    margin: 12px
+    font-family: "Museo Sans 500"
 
 #logo
     width: 150px
@@ -74,3 +85,8 @@ a.is-hollow
     h5
         color: $brand-color
         text-transform: capitalize
+        font-size: 34px
+        font-weight: 500
+
+.is-brand-color
+    color: $brand-color

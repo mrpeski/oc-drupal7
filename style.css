@@ -2,17 +2,36 @@
   padding: 0;
   margin: 0; }
 
+@font-face {
+  font-family: "Museo Sans 500";
+  src: url("fonts/museosans_500-webfont.ttf"), url("fonts/museosans_500-webfont.ttf") format("truetype"), url("fonts/EntezareZohoor2.svg") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: "Museo Sans 700";
+  src: url("fonts/museosans_700-webfont.ttf"), url("fonts/museosans_700-webfont.ttf") format("truetype"), url("fonts/EntezareZohoor2.svg") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: "Museo Sans 300";
+  src: url("fonts/museosans-300-webfont.ttf"), url("fonts/museosans-300-webfont.ttf") format("truetype"), url("fonts/EntezareZohoor2.svg") format("svg");
+  font-weight: 300;
+  font-style: normal; }
 body, html {
   width: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 14px;
+  line-height: 1.6;
   background: #fff;
   color: #454850;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Museo Sans 700"; }
 
 nav a, button, input {
   min-width: 48px;
@@ -40,14 +59,21 @@ img {
 #header {
   position: relative;
   height: 80px;
-  padding: 0 180px; }
+  padding: 0 10px; }
+  #header .is-top {
+    padding: 17px 0;
+    display: inline-block;
+    float: right; }
 
 #logo {
   float: left; }
 
 .is-contained {
-  padding: 0 180px; }
+  padding: 0 10px; }
 
+@media only screen and (min-width: 1200px) {
+  .is-contained {
+    padding: 0 180px; } }
 .section {
   padding: 20px 0;
   text-align: center; }
@@ -63,14 +89,18 @@ footer {
 #nav {
   background: inherit;
   float: right;
-  padding: 32px 0; }
+  padding: 30px 0;
+  font-family: "Museo Sans 500"; }
 
 a.is-hollow {
   background: transparent;
   border: 1px solid #5fc0c3;
   padding: 0.8em 1.6em !important;
+  box-sizing: border-box;
   color: #5fc0c3 !important;
-  font-weight: 500; }
+  font-weight: 500;
+  font-family: "Museo Sans 500";
+  text-transform: uppercase; }
 
 #nav li {
   list-style: none;
@@ -87,8 +117,9 @@ a.is-hollow {
   color: #fff;
   background: url(images/JBW2PXDOL6.png) left center no-repeat, rgba(0, 0, 0, 0.7); }
   #window h1 {
-    font-size: 60px;
-    font-weight: 300; }
+    font-size: 3em;
+    font-weight: 300;
+    font-family: "Museo Sans 500"; }
   #window p:nth-child(2) {
     font-size: 18px;
     line-height: 2;
@@ -98,26 +129,28 @@ a.is-hollow {
     padding: 10px; }
   #window p {
     font-size: 14px;
-    line-height: 1.6;
-    width: 600px;
-    margin: auto; }
+    line-height: 1.6; }
 
 .wash {
   background: #f1f2f5;
-  padding: 0 180px;
-  line-height: 4; }
+  padding: 0 10px; }
 
-.event p {
-  padding: 30px 0;
-  line-height: 1.2;
-  float: left; }
+.event {
+  text-align: center;
+  padding: 20px 0; }
+  .event h4 {
+    font-size: 18px; }
+  .event .push-30 {
+    margin-top: 30px; }
 
 .button {
   color: #fff;
   background: #5fc0c3;
   padding: 0.8em 1.6em;
   font-weight: 500;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin: 12px;
+  font-family: "Museo Sans 500"; }
 
 #logo {
   width: 150px; }
@@ -131,6 +164,11 @@ a.is-hollow {
   margin: 5px; }
   .card h5 {
     color: #5fc0c3;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    font-size: 34px;
+    font-weight: 500; }
+
+.is-brand-color {
+  color: #5fc0c3; }
 
 /*# sourceMappingURL=style.css.map */
