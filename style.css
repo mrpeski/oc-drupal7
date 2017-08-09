@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body, html {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  background: #fff;
+  color: #454850;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; }
+
+nav a, button, input {
+  min-width: 48px;
+  min-height: 48px;
+  font-size: 14px;
+  font-weight: 500; }
+
+a {
+  color: #5fc0c3;
+  text-decoration: none;
+  transition: color 2s; }
+
+a:hover {
+  color: #338689; }
+
+.hr {
+  padding: 30px 0; }
+
+img {
+  max-width: 100%; }
+
+.main-navigation a {
+  height: 80px important; }
+
+#header {
+  position: relative;
+  height: 80px;
+  padding: 0 180px; }
+
+#logo {
+  float: left; }
+
+.is-contained {
+  padding: 0 180px; }
+
+.section {
+  padding: 20px 0;
+  text-align: center; }
+  .section h4 {
+    font-size: 30px; }
+  .section .is-hollow {
+    display: block; }
+
+footer {
+  background: #454850;
+  color: #f1f2f5; }
+
+#nav {
+  background: inherit;
+  float: right;
+  padding: 32px 0; }
+
+a.is-hollow {
+  background: transparent;
+  border: 1px solid #5fc0c3;
+  padding: 0.8em 1.6em !important;
+  color: #5fc0c3 !important;
+  font-weight: 500; }
+
+#nav li {
+  list-style: none;
+  float: left;
+  color: #454850; }
+  #nav li a {
+    padding: 1.5em;
+    text-transform: uppercase;
+    color: inherit; }
+
+#window {
+  text-align: center;
+  padding: 85px;
+  color: #fff;
+  background: url(images/JBW2PXDOL6.png) left center no-repeat, rgba(0, 0, 0, 0.7); }
+  #window h1 {
+    font-size: 60px;
+    font-weight: 300; }
+  #window p:nth-child(2) {
+    font-size: 18px;
+    line-height: 2;
+    padding: 10px; }
+  #window p:last-child {
+    font-size: 18px;
+    padding: 10px; }
+  #window p {
+    font-size: 14px;
+    line-height: 1.6;
+    width: 600px;
+    margin: auto; }
+
+.wash {
+  background: #f1f2f5;
+  padding: 0 180px;
+  line-height: 4; }
+
+.event p {
+  padding: 30px 0;
+  line-height: 1.2;
+  float: left; }
+
+.button {
+  color: #fff;
+  background: #5fc0c3;
+  padding: 0.8em 1.6em;
+  font-weight: 500;
+  text-transform: uppercase; }
+
+#logo {
+  width: 150px; }
+  #logo img {
+    max-width: 100%; }
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+  height: 343px;
+  margin: 5px; }
+  .card h5 {
+    color: #5fc0c3;
+    text-transform: capitalize; }
+
+/*# sourceMappingURL=style.css.map */
