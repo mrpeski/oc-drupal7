@@ -23,15 +23,57 @@
 
 
 .section
-    padding: 20px 0
+    padding: 40px 0
     text-align: center
+    clear: both
 
     h4
         font-size: 30px
     
     .is-hollow
-        display: block
+        padding: 0.8em 4em !important
+
+
 
 footer
     background: $dark
-    color: $wash
+    color: #969eb6
+
+
+@media screen and (min-width: 1200px)
+    .the-module
+        width: 8.333%
+    .has-2-modules
+        width: 16.66%
+    .has-3-modules
+        width: 24.999%
+    .has-4-modules
+        width: 33.333%
+    .has-5-modules
+        width: 41.66%
+    .has-6-modules
+        width: 50%
+    .has-7-modules
+        width: 58.333%
+    .has-8-modules
+        width: 66.666%
+    .has-9-modules
+        width: 75%
+    .has-10-modules
+        width: 83.333%
+    .has-11-modules
+        width: 91.666%
+    .has-12-modules
+        width: 100%
+
+@media screen and (min-width: 1200px)
+    .has-1-module, .has-2-modules, .has-3-modules, .has-4-modules, .has-5-modules, .has-6-modules, .has-7-modules, .has-8-modules, .has-9-modules, .has-10-modules, .has-11-modules, .has-12-modules
+        float: left
+        padding: 0 10px 
+        box-sizing: border-box
+
+.grid 
+    display: inline-block
+
+.right
+    margin-right: 40px

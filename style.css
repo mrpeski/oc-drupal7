@@ -33,6 +33,9 @@ body, html {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Museo Sans 700"; }
 
+p {
+  padding: 14px 0; }
+
 nav a, button, input {
   min-width: 48px;
   min-height: 48px;
@@ -75,16 +78,64 @@ img {
   .is-contained {
     padding: 0 180px; } }
 .section {
-  padding: 20px 0;
-  text-align: center; }
+  padding: 40px 0;
+  text-align: center;
+  clear: both; }
   .section h4 {
     font-size: 30px; }
   .section .is-hollow {
-    display: block; }
+    padding: 0.8em 4em !important; }
 
 footer {
   background: #454850;
-  color: #f1f2f5; }
+  color: #969eb6; }
+
+@media screen and (min-width: 1200px) {
+  .the-module {
+    width: 8.333%; }
+
+  .has-2-modules {
+    width: 16.66%; }
+
+  .has-3-modules {
+    width: 24.999%; }
+
+  .has-4-modules {
+    width: 33.333%; }
+
+  .has-5-modules {
+    width: 41.66%; }
+
+  .has-6-modules {
+    width: 50%; }
+
+  .has-7-modules {
+    width: 58.333%; }
+
+  .has-8-modules {
+    width: 66.666%; }
+
+  .has-9-modules {
+    width: 75%; }
+
+  .has-10-modules {
+    width: 83.333%; }
+
+  .has-11-modules {
+    width: 91.666%; }
+
+  .has-12-modules {
+    width: 100%; } }
+@media screen and (min-width: 1200px) {
+  .has-1-module, .has-2-modules, .has-3-modules, .has-4-modules, .has-5-modules, .has-6-modules, .has-7-modules, .has-8-modules, .has-9-modules, .has-10-modules, .has-11-modules, .has-12-modules {
+    float: left;
+    padding: 0 10px;
+    box-sizing: border-box; } }
+.grid {
+  display: inline-block; }
+
+.right {
+  margin-right: 40px; }
 
 #nav {
   background: inherit;
@@ -117,9 +168,9 @@ a.is-hollow {
   color: #fff;
   background: url(images/JBW2PXDOL6.png) left center no-repeat, rgba(0, 0, 0, 0.7); }
   #window h1 {
-    font-size: 3em;
+    font-size: 4em;
     font-weight: 300;
-    font-family: "Museo Sans 500"; }
+    font-family: "Museo Sans 300"; }
   #window p:nth-child(2) {
     font-size: 18px;
     line-height: 2;
@@ -132,12 +183,13 @@ a.is-hollow {
     line-height: 1.6; }
 
 .wash {
-  background: #f1f2f5;
-  padding: 0 10px; }
+  background: #f1f2f5; }
 
 .event {
-  text-align: center;
-  padding: 20px 0; }
+  text-align: left;
+  padding: 40px 0; }
+  .event .grid {
+    display: block; }
   .event h4 {
     font-size: 18px; }
   .event .push-30 {
@@ -157,18 +209,105 @@ a.is-hollow {
   #logo img {
     max-width: 100%; }
 
+.is-brand-color {
+  color: #5fc0c3; }
+
+.get-involved h5 {
+  font-size: 1em; }
+.get-involved img {
+  max-height: 200px;
+  margin: 20px 0; }
+.get-involved img.meetup {
+  transform: rotate(-10deg) scale(0.6); }
+
+.blog .excerpt {
+  margin: 20px 0;
+  text-align: left; }
+  .blog .excerpt .title {
+    font-size: 1em;
+    color: #5fc0c3; }
+  .blog .excerpt .date-time {
+    padding: 10px; }
+
+.divider {
+  height: 1px;
+  border-bottom: 1px solid #f1f2f5;
+  display: block; }
+  .divider.gray {
+    border-color: #d9dadd; }
+  .divider.dark {
+    border-color: #575b64; }
+
+.our-mission > p:nth-child(3) {
+  font-size: 1.1em;
+  font-weight: 500; }
+
 .card {
   background: #fff;
-  border-radius: 2px;
-  height: 343px;
-  margin: 5px; }
+  border-radius: 8px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 20px;
+  padding-top: 80px; }
   .card h5 {
     color: #5fc0c3;
     text-transform: capitalize;
-    font-size: 34px;
+    font-size: 17px;
     font-weight: 500; }
+  .card .circle {
+    border: 10px solid #fff; }
 
-.is-brand-color {
-  color: #5fc0c3; }
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #5fc0c3; }
+
+.pull-up {
+  margin-top: -142px;
+  margin-bottom: 20px;
+  z-index: 10; }
+
+.center-elem {
+  margin-left: auto;
+  margin-right: auto; }
+
+.our-members img {
+  max-width: 160px;
+  max-height: 80px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.slider {
+  clear: both;
+  display: inline-block;
+  padding: 10px; }
+
+.slider-item {
+  height: 60px;
+  min-width: 120px;
+  position: relative;
+  padding: 60px 0;
+  float: left;
+  margin-right: 100px; }
+
+.slider-item:last-child {
+  margin-left: 0;
+  margin-right: 0; }
+
+.indicators {
+  padding: 10px 0;
+  width: 90px; }
+  .indicators .circle {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    background: #979eb1;
+    margin: 0 10px;
+    float: left; }
+  .indicators .active {
+    background: #5fc0c3; }
 
 /*# sourceMappingURL=style.css.map */
