@@ -25,13 +25,14 @@ body, html {
   font-size: 14px;
   line-height: 1.6;
   background: #fff;
-  color: #454850;
+  color: #5a6175;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Museo Sans 700"; }
+  font-family: "Museo Sans 700";
+  color: #565659; }
 
 p {
   padding: 14px 0; }
@@ -45,7 +46,7 @@ nav a, button, input {
 a {
   color: #5fc0c3;
   text-decoration: none;
-  transition: color 2s; }
+  transition: color 0.4s; }
 
 a:hover {
   color: #338689; }
@@ -59,12 +60,15 @@ img {
 .main-navigation a {
   height: 80px important; }
 
+footer {
+  text-align: center; }
+
 #header {
   position: relative;
   height: 80px;
   padding: 0 10px; }
   #header .is-top {
-    padding: 17px 0;
+    padding: 20px 0;
     display: inline-block;
     float: right; }
 
@@ -151,7 +155,8 @@ a.is-hollow {
   color: #5fc0c3 !important;
   font-weight: 500;
   font-family: "Museo Sans 500";
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 1.2; }
 
 #nav li {
   list-style: none;
@@ -170,7 +175,8 @@ a.is-hollow {
   #window h1 {
     font-size: 4em;
     font-weight: 300;
-    font-family: "Museo Sans 300"; }
+    font-family: "Museo Sans 300";
+    color: #fff; }
   #window p:nth-child(2) {
     font-size: 18px;
     line-height: 2;
@@ -202,7 +208,8 @@ a.is-hollow {
   font-weight: 500;
   text-transform: uppercase;
   margin: 12px;
-  font-family: "Museo Sans 500"; }
+  font-family: "Museo Sans 500";
+  line-height: 1.2; }
 
 #logo {
   width: 150px; }
@@ -215,7 +222,7 @@ a.is-hollow {
 .get-involved h5 {
   font-size: 1em; }
 .get-involved img {
-  max-height: 200px;
+  max-height: 120px;
   margin: 20px 0; }
 .get-involved img.meetup {
   transform: rotate(-10deg) scale(0.6); }
@@ -250,18 +257,24 @@ a.is-hollow {
   padding: 20px;
   padding-top: 80px; }
   .card h5 {
-    color: #5fc0c3;
+    color: #57c0d5;
     text-transform: capitalize;
     font-size: 17px;
     font-weight: 500; }
   .card .circle {
-    border: 10px solid #fff; }
+    border: 10px solid #fff;
+    position: relative; }
+    .card .circle img {
+      height: 50px;
+      position: absolute;
+      top: 25%;
+      left: 25%; }
 
 .circle {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: #5fc0c3; }
+  background: #57c0d5; }
 
 .pull-up {
   margin-top: -142px;
@@ -309,5 +322,44 @@ a.is-hollow {
     float: left; }
   .indicators .active {
     background: #5fc0c3; }
+
+.social {
+  text-indent: -9999px;
+  width: 20px;
+  height: 20px;
+  background: url("") center center no-repeat;
+  display: inline-block;
+  outline: none;
+  background-size: contain; }
+  .social.facebook {
+    background-image: url(facebook.svg); }
+  .social.twitter {
+    background-image: url(twitter.svg); }
+  .social.googl {
+    background-image: url(googl.svg); }
+
+.chevron {
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url("chevron.svg") center center no-repeat;
+  display: inline-block;
+  outline: none;
+  background-size: contain;
+  border-width: 0;
+  cursor: pointer; }
+  .chevron.prev {
+    background-image: url("chevron_prev.svg"); }
+
+.slider {
+  position: relative; }
+  .slider .chevron {
+    position: absolute;
+    top: 42%; }
+    .slider .chevron.prev {
+      left: 10px; }
+    .slider .chevron.next {
+      right: 10px; }
+  .slider .chevron:hover {
+    transform: scale(1.2); }
 
 /*# sourceMappingURL=style.css.map */
