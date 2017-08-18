@@ -1,54 +1,115 @@
 #nav
-    background: inherit
-    float: right
-    padding: 30px 0
-    font-family: "Museo Sans 500"
+    position: absolute
+    width: 280px
+    float: none
+    z-index: 2
+    background: rgba(255,255,255,0.7)
+    height: 100vh
+    padding-top: 30px
+    left: 0
+    top: 80px
+    transform: translate(-260px, 0)
+    transition: transform 0.3s ease
+    & li
+        list-style: none
+        float: none
+        color: $dark
+        a
+            padding: 0.6em
+            text-transform: uppercase
+            color: inherit
+    &:hover
+        transform: translate(0,0)
+
+@media screen and (min-width: 600px)
+    #nav
+        background: inherit
+        position: relative
+        top: 0
+        height: auto
+        width: auto
+        float: right
+        padding: 30px 0
+        font-family: "Museo Sans 500"
+        transform: translate(0, 0)
+        & li
+            list-style: none
+            float: left
+            color: $dark
+            a
+                padding: 1.5em
+                text-transform: uppercase
+                color: inherit
+    li.last
+        margin-right: 24px
 
 a.is-hollow
     background: transparent
     border: 1px solid $brand-color
-    padding: 0.8em 1.6em !important
-    box-sizing: border-box
+    padding: 0.714em 1.285em !important
     color: $brand-color !important
+    box-sizing: border-box
     font-weight: 500
     font-family: "Museo Sans 500"
     text-transform: uppercase
     line-height: 1.2
+    border-radius: 2px
 
-#nav li
-    list-style: none
-    float: left
-    color: $dark
-    a
-        padding: 1.5em
-        text-transform: uppercase
-        color: inherit
 
+.button
+    color: $white
+    background: $brand-color
+    padding: 0.714em 1.285em // 10px 18px 0.875em
+    border-radius: 2px
+    font-weight: 500
+    box-sizing: border-box
+    text-transform: uppercase
+    margin: 12px 0
+    font-family: "Museo Sans 500"
+    line-height: 1.2
+    margin-bottom: 20px
+    transition: box-shadow .2s cubic-bezier(0.8, 1, 0.4, 0.6) 
+
+.button:hover
+    color: $white
+    box-shadow: 0 2px 4px rgba(99, 129, 126, 0.5), 0 2px 1px rgba(99, 129, 126, 0.5)
 #window
     text-align: center
-    padding: 85px
-    // height: 450px
+    padding: 0
     color: $white
     background:  url(images/JBW2PXDOL6.png) left center  no-repeat, rgba(0,0,0,0.7)
-    
     h1
-        font-size: 4em // 8em 
-        font-weight: 300
-        font-family: "Museo Sans 300"
+        font-size: 1.5em // 8em 
         color: $white
+        -webkit-margin-before:  0
+        -webkit-margin-after:   0
+        clear: both
+        
+@media screen and (min-width: 1200px)
+    #window
+        
+        padding: 85px
+        color: $white
+        background:  url(images/JBW2PXDOL6.png) left center  no-repeat, rgba(0,0,0,0.7)
+        
+        h1
+            font-size: 4em // 8em 
+            font-weight: 300
+            font-family: "Museo Sans Rounded"
+            color: $white
 
-    p:nth-child(2)
-        font-size: 18px
-        line-height: 2
-        padding: 10px
-    p:last-child
-        font-size: 18px
-        padding: 10px
-    p
-        font-size: 14px
-        line-height: 1.6
-        // width: 600px
-        // margin: auto
+        p:nth-child(2)
+            font-size: 18px
+            line-height: 2
+            padding: 10px
+        p:last-child
+            font-size: 18px
+            padding: 10px
+        p
+            font-size: 14px
+            line-height: 1.6
+            // width: 600px
+            // margin: auto
 .wash
     background: $wash
     // padding: $side-padding
@@ -57,25 +118,23 @@ a.is-hollow
 .event
     text-align: left
     // min-height: 120px
-    padding: 40px 0
+    padding: 20px 0
+
+    p
+        padding: 8px 0
     
     .grid
-        display: block
+        display: flex
+        flex-wrap: wrap
+        align-items: center
 
     h4
         font-size: 18px
-    .push-30
-        margin-top: 30px
+    .register
+        padding-right: 0
+        text-align: right
+        margin-right: 0
 
-.button
-    color: $white
-    background: $brand-color
-    padding: 0.8em 1.6em
-    font-weight: 500
-    text-transform: uppercase
-    margin: 12px
-    font-family: "Museo Sans 500"
-    line-height: 1.2
 
 #logo
     width: 150px
@@ -91,7 +150,6 @@ a.is-hollow
         font-size: 1em
     img
         max-height: 120px
-        // max-width: 200px
         margin: 20px 0
     img.meetup
         transform: rotate(-10deg) scale(0.6)
@@ -100,13 +158,26 @@ a.is-hollow
 .blog
     .excerpt
         margin: 20px 0
-        // padding: 10px 0
         text-align: left
+        list-style: none
         .title
             font-size: 1em
             color: $brand-color
         .date-time
-            padding: 10px
+            padding: 10px 0
+
+.underline::after
+    content: " "
+    display: block
+    height: 1px
+    border-bottom: 1px solid #f1f2f5
+
+.overline::before
+    content: " "
+    display: block
+    height: 1px
+    border-bottom: 1px solid #f1f2f5
+        
 .divider
     height: 1px
     border-bottom: 1px solid #f1f2f5
@@ -169,16 +240,14 @@ a.is-hollow
         transform: translate(-50%, -50%)
 .slider
     clear: both
-    display: inline-block
+    display: flex
     padding: 10px
 .slider-item
     height: 60px
     min-width: 120px
     position: relative
     padding: 60px 0
-    float: left
-    // margin-left: 120px
-    margin-right: 100px
+    margin-right: auto
 
 .slider-item:last-child
     margin-left: 0
@@ -208,25 +277,26 @@ a.is-hollow
     background-size: contain
 
     &.facebook
-        background-image: url(facebook.svg)
+        background-image: url(images/facebook.svg)
     &.twitter
-        background-image: url(twitter.svg)
+        background-image: url(images/twitter.svg)
     &.googl
-        background-image: url(googl.svg)
+        background-image: url(images/googl.svg)
 
 .chevron
     text-indent: -9999px
     overflow: hidden
-    background: url("chevron.svg") center center no-repeat
+    background: url("images/chevron.svg") center center no-repeat
     display: inline-block
     outline: none
     background-size: contain
     border-width: 0
     cursor: pointer
+    transition: all 0.3s
     
 
     &.prev
-        background-image: url("chevron_prev.svg")
+        background-image: url("images/chevron_prev.svg")
 
 .slider
     position: relative
@@ -240,5 +310,36 @@ a.is-hollow
             right: 10px
     
     .chevron:hover
-        transform: scale(1.2)
-        
+        transform: translate(5px)
+        &.prev:hover
+            transform: translate(-5px)
+
+fieldset
+    border-style: hidden
+
+#breadcrumb
+    h2.element-invisible 
+        display: relative
+        font-weight: 300
+        font-size: 1em
+textarea
+    outline-color: $brand-color 
+    // outline-width: 2px
+input    
+    padding: 20px
+    background: $wash
+    margin: 5px 0
+    outline-color: $brand-color 
+    outline-width: 2px
+    border: 0
+    border-radius: 4px
+    color: $dark
+    margin-right: 20px 
+
+input[type="submit"], input[type="submit"]
+    // padding: 20px
+    background: $brand-color
+    cursor: pointer
+    // margin: 5px 0
+#content
+    padding: 50px 0

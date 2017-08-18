@@ -1,0 +1,33 @@
+name = Open Charity
+description = A multi-column responsive theme for Open Charity. 
+package = Core
+;version = VERSION
+screenshot = screenshot.png
+core = 7.x
+
+features[] = logo 
+features[] = name 
+features[] = node_user_picture 
+features[] = comment_user_picture 
+features[] = comment_user_verification 
+features[] = favicon 
+features[] = main_menu 
+
+regions[header] = Header 
+regions[highlighted] = Highlighted 
+regions[help] = Help 
+regions[content] = Content 
+regions[mission] = Our Mission
+regions[members] = Our Members
+regions[window] = Carousel
+regions[get_involved] = Get Involved
+regions[sidebar_first] = Left sidebar 
+regions[sidebar_second] = Right sidebar 
+regions[social_footer] = Social Footer
+regions[footer] = Footer 
+regions[promoted_articles] = Recent Blog 
+
+
+
+stylesheets[all][] = style.css
+

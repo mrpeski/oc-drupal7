@@ -19,21 +19,27 @@
 
 @media only screen and (min-width: 1200px)
     .is-contained
-        padding: $padding
+        // padding: $padding
+        width: 1000px
+        margin: auto
 
 
 .section
-    padding: 40px 0
+    padding-top: 20px
+    padding-bottom: 40px
     text-align: center
     clear: both
 
     h4
         font-size: 30px
+        text-transform: uppercase
     
     .is-hollow
         padding: 0.8em 4em !important
 
-
+#main
+    .section
+        text-align: left
 
 footer
     background: $dark
@@ -65,15 +71,27 @@ footer
         width: 91.666%
     .has-12-modules
         width: 100%
+    .take-20
+        width: 20%
+    .take-25
+        width: 25%
 
 @media screen and (min-width: 1200px)
     .has-1-module, .has-2-modules, .has-3-modules, .has-4-modules, .has-5-modules, .has-6-modules, .has-7-modules, .has-8-modules, .has-9-modules, .has-10-modules, .has-11-modules, .has-12-modules
-        float: left
+        // float: left
         padding: 0 10px 
         box-sizing: border-box
+        flex-grow: inherit
+@media screen and (max-width: 450px)
+    .has-1-module, .has-2-modules, .has-3-modules, .has-4-modules, .has-5-modules, .has-6-modules, .has-7-modules, .has-8-modules, .has-9-modules, .has-10-modules, .has-11-modules, .has-12-modules,.take-20, .take-25
+        width: 100%
+        box-sizing: border-box
+        flex-grow: inherit
 
 .grid 
-    display: inline-block
-
+    // display: inline-block
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -10px
 .right
     margin-right: 40px

@@ -3,6 +3,7 @@
 *
     padding: 0
     margin: 0
+    transition: all 0.3s ease
 
 @font-face
     font-family: 'Museo Sans 500'
@@ -19,6 +20,11 @@
 @font-face
     font-family: 'Museo Sans 300'
     src: url('fonts/museosans-300-webfont.ttf'), url('fonts/museosans-300-webfont.ttf') format('truetype'), url('fonts/EntezareZohoor2.svg') format('svg')
+    font-weight: 300
+    font-style: normal
+@font-face
+    font-family: 'Open Sans'
+    src: url('fontsOpenSans-Regular.ttf') format('truetype')
     font-weight: 300
     font-style: normal
 
@@ -45,7 +51,7 @@ h1,h2,h3,h4,h5,h6
 p
     padding: 14px 0
 
-nav a, button, input
+nav a, button
     min-width: 48px
     min-height: 48px
     font-size: $base-font-size
@@ -54,7 +60,7 @@ nav a, button, input
 a
     color: $brand-color
     text-decoration: none
-    transition: color 0.4s
+    transition: color .2s cubic-bezier(0.8, 1, 0.4, 0.6) 
 
 
 a:hover 
@@ -69,6 +75,8 @@ img
 .main-navigation
     a
         height: 80px important
-
+.item-list
+    ul
+        list-style: none
 footer
     text-align: center
