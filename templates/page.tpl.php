@@ -2,14 +2,17 @@
         <div class="is-contained">
             <a href="/" id="logo">
             <meta name="Logo" content="Open Charity">
-                <img src="<?php echo '/'. $directory . '/open_charity_logo@2.png'?>" alt="Open Charity">
+                <img src="<?php echo '/'. $directory . '/images/open_charity_logo.svg'?>" alt="Open Charity">
             </a>
+            <div class="header-item">
+                <span id="ham" class="ham">Menu</span>
+            </div>        
         <span class="is-top">
-        <?php if ($logged_in): ?>
+        <?php // if ($logged_in): ?>
             
-        <?php else: ?>
-        <?php print l("Join Us", "/user/register", array('attributes' => array('class' => 'is-hollow', 'style' =>"float:right"))); ?>
-        <?php endif; ?>
+        <?php // else: ?>
+        <?php // print l("Join Us", "/user/register", array('attributes' => array('class' => 'is-hollow', 'style' =>"float:right"))); ?>
+        <?php // endif; ?>
         </span>
         <?php if ($main_menu): ?>
             <?php print theme('oc_links', array('links' => $main_menu, 'attributes' => array('id' => 'nav', 'class' => array('main-navigation')) )); ?>

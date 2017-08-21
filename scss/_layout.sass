@@ -1,15 +1,7 @@
 #header
     position: relative
-    height: 80px
+    height: 5.714em
     padding: $side-padding
-    // padding-top: 20px 
-    // line-height: 4
-
-    .is-top
-        padding: 20px 0
-        display: inline-block
-        float: right
-
 
 #logo
     float: left
@@ -17,25 +9,27 @@
 .is-contained
     padding: $side-padding
 
-@media only screen and (min-width: 1200px)
-    .is-contained
-        // padding: $padding
-        width: 1000px
-        margin: auto
 
+@media screen and (min-width: 1024px)
+    .is-contained
+        width: 77.143em
+        margin: auto
+    input
+        width: 60%
 
 .section
-    padding-top: 20px
-    padding-bottom: 40px
+    padding: 1.428em 0
     text-align: center
     clear: both
 
     h4
-        font-size: 30px
+        font-size: 2.143em
         text-transform: uppercase
     
     .is-hollow
         padding: 0.8em 4em !important
+        margin: 0.85em
+        display: inline-block
 
 #main
     .section
@@ -45,6 +39,18 @@ footer
     background: $dark
     color: #969eb6
 
+.has-1-module, .has-2-modules, .has-3-modules, .has-4-modules, .has-5-modules, .has-6-modules, .has-7-modules, .has-8-modules, .has-9-modules, .has-10-modules, .has-11-modules, .has-12-modules,.take-20, .take-25
+    width: 100%
+    box-sizing: border-box
+    padding: 0 20px
+
+.next-event
+    display: block
+    .register 
+        text-align: center
+        .button
+            display: inline-block
+            float: none
 
 @media screen and (min-width: 1200px)
     .the-module
@@ -75,23 +81,51 @@ footer
         width: 20%
     .take-25
         width: 25%
+    
+    .register
+        text-align: right
 
 @media screen and (min-width: 1200px)
     .has-1-module, .has-2-modules, .has-3-modules, .has-4-modules, .has-5-modules, .has-6-modules, .has-7-modules, .has-8-modules, .has-9-modules, .has-10-modules, .has-11-modules, .has-12-modules
-        // float: left
         padding: 0 10px 
         box-sizing: border-box
-        flex-grow: inherit
-@media screen and (max-width: 450px)
-    .has-1-module, .has-2-modules, .has-3-modules, .has-4-modules, .has-5-modules, .has-6-modules, .has-7-modules, .has-8-modules, .has-9-modules, .has-10-modules, .has-11-modules, .has-12-modules,.take-20, .take-25
-        width: 100%
-        box-sizing: border-box
-        flex-grow: inherit
+        // flex-grow: inherit
+    .next-event
+        display: inline-block
+@media screen and (min-width: 620px) and (max-width: 1200px)
+    .has-1-module, .has-3-modules, .has-4-modules, .has-5-modules, .has-6-modules, .has-7-modules, .has-8-modules, .has-9-modules, .has-11-modules, .has-12-modules,.take-20, .take-25
+        width: 50%
+        margin: auto
+    .is-contained
+        width: 90%
+        margin: auto
+    .next-event
+        display: inline-block
+    .event
+        .has-10-modules
+            width: 83.333%
+        .has-2-modules
+            width: 16.66%
+    .wrap
+        width: 37.5em
+        margin: auto
+
+    #window 
+        h1
+            font-size: 2.8em
+@media screen and (min-width: 450px ) and (max-width: 620px)
+    .is-contained
+        width: 400px
+        margin: auto
+    // .next-event
+    //     display: block
+    // .register 
+    //     text-align: center
+    //     .button
+    //         display: inline-block
+    //         float: none
 
 .grid 
-    // display: inline-block
     display: flex
     flex-wrap: wrap
     margin: 0 -10px
-.right
-    margin-right: 40px

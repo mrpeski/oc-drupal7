@@ -1,3 +1,4 @@
+<div class="our-mission">
 <?php print $mission_body ;?>
         <div class="grid">
             <div class="has-4-modules">
@@ -28,3 +29,4 @@
                 </div>
             </div>
         </div>
+</div>

@@ -1,3 +1,4 @@
+<div class="our-members">
 <div class="slider">
     <div class="slider-item take-20">
         <img src="<?php echo $directory . '/images/cancer-research-uk.png' ?>" alt="">
@@ -19,4 +20,5 @@
     <div class="circle active"></div>
     <div class="circle"></div>
     <div class="circle"></div>
+</div>
 </div>

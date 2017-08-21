@@ -34,22 +34,24 @@ body, html
     margin: 0
     font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif
     font-size: 14px
-    line-height: 1.6
+    line-height: 1.714
     background: $white
     color: $base-font-color
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
     text-rendering: optimizeLegibility
 
+@media screen and (min-width: 1800px)
+    body, html
+        font-size: 28px
+    
 h1,h2,h3,h4,h5,h6 
     font-family: "Museo Sans 700"
     color: $headings-color
-    // -webkit-margin-before: 0em
-    // -webkit-margin-after: 0em
-    // -webkit-margin-start: 0px
-    // -webkit-margin-end: 0px
+    margin: 0
+    margin-bottom: 0.85em
 p
-    padding: 14px 0
+    margin: 0.85em 0
 
 nav a, button
     min-width: 48px
@@ -67,9 +69,9 @@ a:hover
     color: darken($brand-color, 20%)
 
 .hr
-    padding: 30px 0
+    padding: 2.142em 0
 
-img
+img, embed, video, object
     max-width: 100%
 
 .main-navigation
@@ -80,3 +82,8 @@ img
         list-style: none
 footer
     text-align: center
+    height: min-content
+    height: min-intrinsic
+    height: -moz-fit-content
+    p
+        background: $dark

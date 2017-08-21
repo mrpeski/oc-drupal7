@@ -28,6 +28,6 @@ regions[footer] = Footer
 regions[promoted_articles] = Recent Blog 
 
 
-
 stylesheets[all][] = style.css
+
 

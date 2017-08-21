@@ -1,35 +1,44 @@
-#nav
+.main-navigation
     position: absolute
     width: 280px
     float: none
     z-index: 2
-    background: rgba(255,255,255,0.7)
-    height: 100vh
-    padding-top: 30px
+    background: rgb(255,255,255)
+    height: calc(100vh - 80px)
+    // padding-top: 2.143em
     left: 0
     top: 80px
-    transform: translate(-260px, 0)
+    transform: translate(-300px, 0)
     transition: transform 0.3s ease
     & li
         list-style: none
         float: none
         color: $dark
         a
-            padding: 0.6em
+            padding: $line-height/2
             text-transform: uppercase
             color: inherit
-    &:hover
-        transform: translate(0,0)
-
-@media screen and (min-width: 600px)
-    #nav
+            font-size: 1em
+.open
+    transform: translate(0,0)
+.ham
+    background: url(images/ham.svg) center center no-repeat
+    width: 30px
+    height: 30px
+    background-size: contain
+    display: inline-block
+    float: right
+    text-indent: -9999px
+    cursor: pointer
+@media screen and (min-width: 620px)
+    .main-navigation
         background: inherit
         position: relative
         top: 0
         height: auto
         width: auto
         float: right
-        padding: 30px 0
+        padding: 2.10476em 0
         font-family: "Museo Sans 500"
         transform: translate(0, 0)
         & li
@@ -37,12 +46,15 @@
             float: left
             color: $dark
             a
-                padding: 1.5em
+                padding: $line-height
                 text-transform: uppercase
                 color: inherit
-    li.last
-        margin-right: 24px
-
+                font-size: 1em
+    
+    .ham
+        display: none
+        height: 0
+    
 a.is-hollow
     background: transparent
     border: 1px solid $brand-color
@@ -52,7 +64,6 @@ a.is-hollow
     font-weight: 500
     font-family: "Museo Sans 500"
     text-transform: uppercase
-    line-height: 1.2
     border-radius: 2px
 
 
@@ -66,7 +77,6 @@ a.is-hollow
     text-transform: uppercase
     margin: 12px 0
     font-family: "Museo Sans 500"
-    line-height: 1.2
     margin-bottom: 20px
     transition: box-shadow .2s cubic-bezier(0.8, 1, 0.4, 0.6) 
 
@@ -75,89 +85,82 @@ a.is-hollow
     box-shadow: 0 2px 4px rgba(99, 129, 126, 0.5), 0 2px 1px rgba(99, 129, 126, 0.5)
 #window
     text-align: center
-    padding: 0
+    padding: 2em
     color: $white
     background:  url(images/JBW2PXDOL6.png) left center  no-repeat, rgba(0,0,0,0.7)
+    background-size: cover
     h1
-        font-size: 1.5em // 8em 
+        font-weight: 300
+        font-family: "Museo Sans Rounded"
         color: $white
-        -webkit-margin-before:  0
-        -webkit-margin-after:   0
+        margin: 0
         clear: both
         
 @media screen and (min-width: 1200px)
-    #window
-        
-        padding: 85px
+    #window 
+        padding: 6.25em 0
         color: $white
         background:  url(images/JBW2PXDOL6.png) left center  no-repeat, rgba(0,0,0,0.7)
-        
+        background-size: cover
         h1
-            font-size: 4em // 8em 
-            font-weight: 300
-            font-family: "Museo Sans Rounded"
-            color: $white
-
-        p:nth-child(2)
-            font-size: 18px
-            line-height: 2
-            padding: 10px
-        p:last-child
-            font-size: 18px
-            padding: 10px
-        p
-            font-size: 14px
-            line-height: 1.6
-            // width: 600px
-            // margin: auto
+            font-size: 3.92em // 8em 
+            
+        .wrap
+            width: 42.5em
+            margin-left: auto
+            margin-right: auto 
+        p:nth-child(1), p:last-child
+            font-size: 1.286em
 .wash
     background: $wash
-    // padding: $side-padding
-    // line-height: 4
-    // clear: both
 .event
-    text-align: left
-    // min-height: 120px
-    padding: 20px 0
+    text-align: center
+    padding: 1.375em 0
 
-    p
-        padding: 8px 0
+    h4
+        font-size: 1.286em
+        margin: auto 0
+    p 
+        margin: 0.129em 0 0.85em
+
+@media screen and (min-width: 620px)
+    .event
+        text-align: left
     
     .grid
         display: flex
         flex-wrap: wrap
         align-items: center
 
-    h4
-        font-size: 18px
-    .register
-        padding-right: 0
-        text-align: right
-        margin-right: 0
-
-
 #logo
-    width: 150px
-    img 
-        max-width: 100%
+    width: 10.714em
+    height: 5.714em
+    display: flex
+
+.header-item
+    margin: 1.712em 0
+    float: right
+
+img 
+    max-width: 100%
 
 
 .is-brand-color
     color: $brand-color
 
+
 .get-involved
     h5
-        font-size: 1em
+        font-size: 1.214em
     img
-        max-height: 120px
-        margin: 20px 0
+        max-height: 7.85em
+        margin: 1.429em 0
     img.meetup
         transform: rotate(-10deg) scale(0.6)
 
 
 .blog
     .excerpt
-        margin: 20px 0
         text-align: left
         list-style: none
         .title
@@ -182,49 +185,47 @@ a.is-hollow
     height: 1px
     border-bottom: 1px solid #f1f2f5
     display: block
-    // margin: 10px 0
     &.gray
         border-color: #d9dadd //575b64
     &.dark
         border-color: #575b64
 
 .our-mission
-    & > p:nth-child(3)
+    & > p:nth-child(2)
         font-size: 1.1em
-        font-weight: 500
+        font-weight: 600
 
 .card
     background: $white
-    border-radius: 8px
-    // height: 343px
-    margin-top: 100px
-    margin-bottom: 100px
-    padding: 20px
-    padding-top: 80px
+    border-radius: 0.571em
+    margin-top: 7.143em
+    margin-bottom: 7.143em
+    padding: 1.428em
+    padding-top: 5.714em
     h5
         color: $brand-color-analogous
         text-transform: capitalize
-        font-size: 17px
+        font-size: 1.214em
         font-weight: 500
 
     .circle
-        border: 10px solid $white
+        border: 0.714em solid $white
         position: relative
         img
-            height: 50px
+            height: 3.571em
             position: absolute
             top: 25%
             left: 25%
 .circle
-    width: 100px
-    height: 100px
+    width: 7.143em
+    height: 7.143em
     border-radius: 50%
     // content: " "
     background: $brand-color-analogous
 
 .pull-up
-    margin-top: -142px
-    margin-bottom: 20px
+    margin-top: -10.143em
+    margin-bottom: 1.429em
     z-index: 10
 .center-elem
     margin-left: auto
@@ -232,8 +233,8 @@ a.is-hollow
 
 .our-members
     img
-        max-width: 160px
-        max-height: 80px
+        max-width: 11.42em
+        max-height: 5.7142em
         position: absolute
         left: 50%
         top: 50%
@@ -241,12 +242,13 @@ a.is-hollow
 .slider
     clear: both
     display: flex
-    padding: 10px
+    padding: 0.714em
+    overflow: auto
 .slider-item
-    height: 60px
-    min-width: 120px
+    height: 4.286em
+    min-width: 8.571em
     position: relative
-    padding: 60px 0
+    padding: 4.286em 0
     margin-right: auto
 
 .slider-item:last-child
@@ -254,14 +256,14 @@ a.is-hollow
     margin-right: 0
 
 .indicators
-    padding: 10px 0
-    width: 90px
+    padding: 0.714em 0
+    width: 6.429em
     .circle
-        width: 10px
-        height: 10px
+        width: 0.714em
+        height: 0.714em
         cursor: pointer
         background: #979eb1
-        margin: 0 10px
+        margin: 0 0.714em
         float: left
 
     .active
@@ -269,8 +271,8 @@ a.is-hollow
 
 .social
     text-indent: -9999px
-    width: 20px
-    height: 20px
+    width: 1.429em
+    height: 1.429em
     background: url("") center center no-repeat
     display: inline-block
     outline: none
@@ -286,6 +288,8 @@ a.is-hollow
 .chevron
     text-indent: -9999px
     overflow: hidden
+    height: 4.286em
+    width: 2.714em
     background: url("images/chevron.svg") center center no-repeat
     display: inline-block
     outline: none
@@ -336,10 +340,13 @@ input
     color: $dark
     margin-right: 20px 
 
-input[type="submit"], input[type="submit"]
-    // padding: 20px
+input[type="submit"]
     background: $brand-color
     cursor: pointer
-    // margin: 5px 0
-#content
-    padding: 50px 0
+
+.social_links
+    padding: 2.143em
+
+@media screen and (max-width: 600px)
+    input
+        width: 260px

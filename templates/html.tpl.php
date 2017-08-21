@@ -50,6 +50,9 @@
 
 <head profile="<?php print $grddl_profile; ?>">
   <?php print $head; ?>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
@@ -61,5 +64,12 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
+  <script>
+        var ham = document.getElementById('ham');
+        ham.addEventListener('click', function(){
+            var nav = document.getElementById('nav');
+            nav.classList.toggle('open');
+        });
+  </script>
 </body>
 </html>
