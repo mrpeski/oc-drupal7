@@ -20,6 +20,7 @@ regions[content] = Content
 regions[mission] = Our Mission
 regions[members] = Our Members
 regions[window] = Carousel
+regions[event] = Next Event
 regions[get_involved] = Get Involved
 regions[sidebar_first] = Left sidebar 
 regions[sidebar_second] = Right sidebar 

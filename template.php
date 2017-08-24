@@ -1,7 +1,5 @@
 <?php
 
-// echo path_to_theme();
-
 /**
  * Register theme hook
  *
@@ -28,6 +26,9 @@ function charity_theme() {
         ),
         'social'  =>  array(
             'template'  => 'social',
+        ),
+        'event' => array(
+            'template'  => 'next_event',
         )
     );
 }

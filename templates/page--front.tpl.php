@@ -1,18 +1,18 @@
 <header id="header">
         <div class="is-contained">
-            <a href="/" id="logo">
+            <a href="/" id="logo" class="header-item">
             <meta name="Logo" content="Open Charity">
-                <img src="<?php echo '/' . $directory . '/images/open_charity_logo.svg'?>" alt="Open Charity">
+                <img src="<?php echo  $directory . '/images/open_charity_logo.svg'?>" alt="Open Charity">
             </a>
             <div class="header-item">
                 <span id="ham" class="ham">Menu</span>
             </div>
-        <span class="is-top">
-        <?php // if ($logged_in): ?>
+        <span class="header-item">
+        <?php if ($logged_in): ?>
             
-        <?php // else: ?>
-        <?php // print l("Join Us", "/user/register", array('attributes' => array('class' => 'is-hollow', 'style' =>"float:right"))); ?>
-        <?php // endif; ?>
+        <?php  else: ?>
+        <?php  print l("Join Us", "/user/register", array('attributes' => array('class' => 'is-hollow'))); ?>
+        <?php  endif; ?>
         </span>
 
         <?php print theme('oc_links', array('links' => $main_menu, 'attributes' => array('id' => 'nav', 'class' => array('main-navigation')) )); ?>
@@ -24,22 +24,13 @@
             <?php  print render($page['window']); ?>
         </div>
     </section>
-
-    <section class="wash">
-        <div class="is-contained">
-        <div class="event">
-            <div class="grid">
-                <div class="has-10-modules">
-                    <h4 class=""><span class="next-event is-brand-color">Next Event:</span> September 24th 2017 18:30 - 21:00</h4>
-                    <p class="">Neque aspernatur consequuntur fugit, nostrum ullam expedita</p>
-                </div>
-                <div class="has-2-modules register">
-                    <a href="#" class="button">Register</a>
-                </div>
+    <?php // if (! empty($event_date)) : ?>
+        <section class="wash">
+            <div class="is-contained">
+                <?php  print render($page['event']); ?>
             </div>
-        </div>
-        
-    </section>
+        </section>
+    <?php // endif ; ?>
      <section class="section">
         <div class="is-contained">
             <?php  print render($page['get_involved']); ?>

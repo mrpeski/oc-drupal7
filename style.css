@@ -5,22 +5,27 @@
 
 @font-face {
   font-family: "Museo Sans 500";
-  src: url("fonts/museosans_500-webfont.ttf"), url("fonts/museosans_500-webfont.ttf") format("truetype"), url("fonts/EntezareZohoor2.svg") format("svg");
+  src: url("fonts/museosans_500-webfont.ttf"), url("fonts/museosans_500-webfont.eot") format("embedded-opentype"), url("fonts/museosans_500-webfont.woff") format("woff"), url("fonts/museosans_500-webfont.svg") format("svg");
   font-weight: 500;
   font-style: normal; }
 @font-face {
   font-family: "Museo Sans 700";
-  src: url("fonts/museosans_700-webfont.ttf"), url("fonts/museosans_700-webfont.ttf") format("truetype"), url("fonts/EntezareZohoor2.svg") format("svg");
+  src: url("fonts/museosans_700-webfont.ttf"), url("fonts/museosans_700-webfont.eot") format("embedded-opentype"), url("fonts/museosans_700-webfont.woff") format("woff"), url("fonts/museosans_700-webfont.svg") format("svg");
   font-weight: 700;
   font-style: normal; }
 @font-face {
   font-family: "Museo Sans 300";
-  src: url("fonts/museosans-300-webfont.ttf"), url("fonts/museosans-300-webfont.ttf") format("truetype"), url("fonts/EntezareZohoor2.svg") format("svg");
+  src: url("fonts/museosans-300-webfont.ttf"), url("fonts/museosans-300-webfont.eot") format("embedded-opentype"), url("fonts/museosans-300-webfont.woff") format("woff"), url("fonts/museosans-300-webfont.svg") format("svg");
   font-weight: 300;
   font-style: normal; }
 @font-face {
   font-family: "Open Sans";
-  src: url("fontsOpenSans-Regular.ttf") format("truetype");
+  src: url("fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: "Museo Sans Rounded 300";
+  src: url("fonts/museosansrounded-300-webfont.ttf") format("truetype"), url("fonts/museosansrounded-300-webfont.eot") format("embedded-opentype"), url("fonts/museosansrounded-300-webfont.woff") format("woff"), url("fonts/museosansrounded-300-webfont.svg") format("svg");
   font-weight: 300;
   font-style: normal; }
 body, html {
@@ -36,7 +41,7 @@ body, html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility; }
 
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 2560px) {
   body, html {
     font-size: 28px; } }
 h1, h2, h3, h4, h5, h6 {
@@ -78,7 +83,8 @@ footer {
   text-align: center;
   height: min-content;
   height: min-intrinsic;
-  height: -moz-fit-content; }
+  height: -moz-fit-content;
+  padding-bottom: 10px; }
   footer p {
     background: #454850; }
 
@@ -108,7 +114,7 @@ footer {
     font-size: 2.143em;
     text-transform: uppercase; }
   .section .is-hollow {
-    padding: 0.8em 4em !important;
+    padding: 0.714em 4em !important;
     margin: 0.85em;
     display: inline-block; }
 
@@ -310,7 +316,7 @@ a.is-hollow {
   background-size: cover; }
   #window h1 {
     font-weight: 300;
-    font-family: "Museo Sans Rounded";
+    font-family: "Museo Sans Rounded 300", "Helvetica Neue", Helvetica, sans-serif;
     color: #fff;
     margin: 0;
     clear: both; }
@@ -351,11 +357,10 @@ a.is-hollow {
     align-items: center; } }
 #logo {
   width: 10.714em;
-  height: 5.714em;
-  display: flex; }
+ }
 
 .header-item {
-  margin: 1.712em 0;
+  margin: 1.9em 0;
   float: right; }
 
 img {

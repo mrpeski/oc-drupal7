@@ -1,0 +1,115 @@
+<?php
+
+/**
+ * @file
+ * A block module.
+ */
+
+function charity_block_info() {
+  $blocks['our_mission'] = array(
+    'info' => t('Our Mission'),
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+  $blocks['our_members'] = array(
+    'info' => t('Our Members'),
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+  $blocks['get_involved'] = array(
+    'info' => t('Get Involved'),
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+  $blocks['window'] = array(
+    'info' => t('Window'),
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+  $blocks['event'] = array(
+    'info' => t('Next Event'),
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+  $blocks['social'] = array(
+    'info' => t('Social'),
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+  return $blocks;
+}
+
+function charity_block_view($delta = '') {
+  switch ($delta) {
+    case 'our_mission':
+      $our_mission = array('mission_1', 'mission_body', 'mission_2', 'mission_3');
+      $a = 0;
+      $vars = [];
+      while ($a < count($our_mission)) {
+        $index = $our_mission[$a];
+          $vars[$index] = theme_get_setting($index);
+        $a++;
+      }
+      
+      $block['subject'] = "Our Mission";
+      $block['content'] = theme('our_mission', $vars);
+      return $block;
+
+    case 'our_members':
+      $block['subject'] = "Our Members";
+      $block['content'] = theme('our_members');
+      return $block;
+
+    case 'get_involved':
+      $get_involved = array(
+                      ['involved_1', 'involved_1_body', 'involved_1_url'], 
+                      ['involved_2', 'involved_2_body', 'involved_2_url'], 
+                      ['involved_3', 'involved_3_body', 'involved_3_url']
+                  );
+      $a = 0;
+      $vars = [];
+      while ($a < count($get_involved)) {
+        foreach($get_involved[$a] as $index):
+          $vars[$index] = theme_get_setting($index);
+        endforeach;
+        $a++;
+      }
+    
+      $block['subject'] = "Get Invovled";
+      $block['content'] = theme('get_involved', $vars);
+      return $block;
+    
+    case 'window':
+      $hero = array('hero_text', 'hero_paragraph');
+      $a = 0;
+      $vars = [];
+      while ($a < count($hero)) {
+        $index = $hero[$a];
+          $vars[$index] = theme_get_setting($index);
+        $a++;
+      }
+        $block['subject'] = NULL;
+        $block['content'] = theme('window', $vars);
+        return $block;
+    case 'event':
+      $event = array('event_date', 'desc', 'lnk');
+        $a = 0;
+        $vars = [];
+        while ($a < count($event)) {
+          $index = $event[$a];
+            $vars[$index] = theme_get_setting($index);
+          $a++;
+        }
+        $block['subject'] = NULL;
+        $block['content'] = theme('event', $vars);
+        return $block;
+    case 'social':
+      $social = array('facebook', 'twitter', 'googl');
+      $a = 0;
+      $vars = [];
+      while ($a < count($social)) {
+        $index = $social[$a];
+          $vars[$index] = theme_get_setting($index);
+        $a++;
+      }
+        $block['subject'] = NULL;
+        $block['content'] = theme('social', $vars);
+        return $block;
+    default:
+      break;
+  }
+}

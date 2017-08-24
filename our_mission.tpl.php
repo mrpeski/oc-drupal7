@@ -4,7 +4,7 @@
             <div class="has-4-modules">
                 <div class="card">
                     <div class="circle center-elem pull-up">
-                        <img src="<?php echo '/'. $directory . '/images/bulb.svg'?>" alt="">
+                        <img src="<?php echo  $directory . '/images/bulb.svg'?>" alt="">
                     </div>
                     <h5>we help charities</h5>
                     <p><?php print $mission_1 ;?></p>

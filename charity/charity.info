@@ -1,0 +1,5 @@
+name = Charity Theme Blocks
+description = This specially made for charity premium theme blocks
+core = 7.x
+
+configure = admin/appearance/settings/charity

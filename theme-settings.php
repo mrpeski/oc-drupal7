@@ -1,6 +1,7 @@
 <?php
 // $foo_example = theme_get_setting('foo_example');
-
+// function hook_form_system_theme_settings_alter(&$form, &$form_state) {
+    
 function charity_form_system_theme_settings_alter(&$form, $form_state) {
     
     $form['hero'] = array(
@@ -8,7 +9,7 @@ function charity_form_system_theme_settings_alter(&$form, $form_state) {
         '#title' => t('Hero'), 
         '#weight' => 5, 
         '#collapsible' => TRUE, 
-        '#collapsed' => FALSE,
+        '#collapsed' => TRUE,
     );
     
     $form['hero']['hero_text'] = array(
@@ -23,6 +24,36 @@ function charity_form_system_theme_settings_alter(&$form, $form_state) {
         '#default_value' => theme_get_setting('hero_paragraph'),
         '#description'   => t("Feel free to edit as you see fit"),
     );
+
+    $form['next_event'] = array(
+        '#type' => 'fieldset', 
+        '#title' => t('Next Event'), 
+        '#weight' => 3, 
+        '#collapsible' => TRUE, 
+        '#collapsed' => FALSE,
+    );
+
+    $form['next_event']['event_date'] = array(
+        '#type'          => 'textfield',
+        '#title'         => t('Next Event'),
+        '#default_value' => theme_get_setting('event_date'),
+        '#description'   => t("Enter event date and time e.g September 24th 2017 18:30 - 21:00"),
+    );
+
+    $form['next_event']['desc'] = array(
+        '#type'          => 'textfield',
+        '#title'         => t('Description'),
+        '#default_value' => theme_get_setting('desc'),
+        '#description'   => t("A short and descriptive sentence about the event."),
+    );
+
+    $form['next_event']['lnk'] = array(
+        '#type'          => 'textfield',
+        '#title'         => t('Registration url'),
+        '#default_value' => theme_get_setting('lnk'),
+        '#description'   => t("e.g The eventbrite page"),
+    );
+
 
     $form['involved'] = array(
         '#type' => 'fieldset', 
