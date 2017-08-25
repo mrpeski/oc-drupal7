@@ -1,6 +1,6 @@
 <header id="header">
         <div class="is-contained">
-            <a href="/" id="logo" class="header-item">
+            <a href="/open-charity" id="logo" class="header-item">
             <meta name="Logo" content="Open Charity">
                 <img src="<?php echo '/open-charity/' . $directory . '/images/open_charity_logo.svg'?>" alt="Open Charity">
             </a>
