@@ -21,6 +21,6 @@ The various sections on the frontpage are converted into blocks. This is to allo
 - Fully Responsive (The website adapts to various devices, serving appropriate content on a device capability basis, resulting in higher conversion rates)
 - Easy customization through descriptive form controls
 - Cross browser support - Internet Explorer 11 and Latest version of the following browsers; Firefox Chrome and Safari.
-- Judicious use of 'VIP HTML tags'. Use of appropriate heading tags for clear page hierachy, useful for screen readers, page crawlers and ultimately page rank.
+- Judicious use of 'VIP HTML tags'. Use of appropriate heading tags for clear page hierarchy, useful for screen readers, page crawlers and ultimately page rank.
 
 
